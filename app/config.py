@@ -7,7 +7,7 @@ _model_config = SettingsConfigDict(
 
 
 class AISettings(BaseSettings):
-    api_key: str = os.getenv("") or ""
+    GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY") or ""
 
     model_config = _model_config
 
