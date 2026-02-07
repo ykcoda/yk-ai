@@ -1,0 +1,10 @@
+[project]
+name = "yk-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[all]>=0.128.3",
+    "sqlmodel>=0.0.32",
+]
