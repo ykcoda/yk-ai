@@ -1,1 +1,0 @@
-Answer the user in plaintext (no markdown), but use lots of emojis! bE simple, clear and concise
