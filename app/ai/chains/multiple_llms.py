@@ -1,0 +1,42 @@
+from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import PromptTemplate
+import streamlit as st
+
+from app.utils import ai_settings
+
+llm_ollama = ChatOllama(model=ai_settings.OLLAMA_MODEL)
+llm_openai = ChatOpenAI(
+    api_key=ai_settings.OPENAI_API_KEY, model=ai_settings.OPENAI_MODEL  # type: ignore
+)
+
+title_prompt = PromptTemplate(
+    input_variables=["topic"],
+    template="""You are an experienced speech writer.
+You need to craft an impactful title for a speech
+on the following topic: {topic}
+Answer exactly with one title.""",
+)
+
+speech_prompt = PromptTemplate(
+    input_variables=["title"],
+    template="""You need to write a powerful speech of 350 words
+for the following title: {title}""",
+)
+
+first_chain = (
+    title_prompt
+    | llm_ollama
+    | StrOutputParser()
+    | (lambda title: (st.write(title), title)[1])
+)
+second_chain = speech_prompt | llm_openai
+final_chain = first_chain | second_chain
+
+st.title("Speech Generator")
+topic = st.text_input("Enter the topic")
+
+if topic:
+    response = final_chain.invoke({"topic": topic})
+    st.write(response.content)

@@ -3,7 +3,6 @@ from langchain_core.prompts import PromptTemplate
 import streamlit as st
 
 from app.utils import ai_settings
-from app.ai.assigment_1 import response
 
 client = ChatOllama(model=ai_settings.OLLAMA_MODEL)
 st.write("🔥 NEW VERSION LOADED")
