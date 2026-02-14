@@ -31,4 +31,6 @@ output = (
     )
 ).content
 
-print(output_parser.parse(output))
+countries = output_parser.parse(output)
+
+print(json.dumps(countries))
