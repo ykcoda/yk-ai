@@ -1,11 +1,11 @@
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 import streamlit as st
 
 from app.utils import ai_settings
 
-llm = ChatOllama(model=ai_settings.OLLAMA_MODEL)
+llm = ChatOpenAI(model=ai_settings.OPENAI_MODEL, api_key=ai_settings.OPENAI_API_KEY)
 
 
 title_prompt = PromptTemplate(

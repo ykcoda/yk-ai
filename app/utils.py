@@ -1,4 +1,5 @@
 import os
+from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -8,7 +9,7 @@ _model_config = SettingsConfigDict(
 
 
 class AISettings(BaseSettings):
-    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY") or ""
+    OPENAI_API_KEY: SecretStr = SecretStr(os.getenv("OPENAI_API_KEY") or "")
     OPENAI_MODEL: str = os.getenv("OPENAI_MODEL") or ""
     OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL") or ""
 
