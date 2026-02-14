@@ -50,4 +50,4 @@ if query:
             )
         )
     ).content
-    st.write(output)
+    st.write(type(output))
