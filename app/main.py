@@ -2,7 +2,7 @@ from fastapi import Body, FastAPI
 from scalar_fastapi import get_scalar_api_reference
 
 from app.api.routes.ai import ai
-from app.ai.llm_connector import llm_connector
+from app.ai.v1.llm_connector import llm_connector
 
 app = FastAPI()
 app.include_router(ai)
