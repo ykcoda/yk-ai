@@ -1,5 +1,5 @@
 import streamlit as st
-from app.ai.llm_connector import llm_connector
+from app.ai.v1.llm_connector import llm_connector
 
 
 st.title("Cuisine Info")

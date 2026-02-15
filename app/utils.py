@@ -12,8 +12,8 @@ class AISettings(BaseSettings):
     OPENAI_API_KEY: SecretStr = SecretStr(os.getenv("OPENAI_API_KEY") or "")
     OPENAI_MODEL: str = os.getenv("OPENAI_MODEL") or ""
     OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL") or ""
+    TAVILY_API_KEY: str | None = None
 
-    model_config = _model_config
     model_config = _model_config
 
 
