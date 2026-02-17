@@ -1,8 +1,7 @@
 services:
-  yk-ai:
-    build: .
+  uptime-kuma:
+    image: louislam/uptime-kuma:2
     ports:
-      - "9090:9090"
+      - "3001:3001"
     volumes:
-      - .:/app
-    command: uv run fastapi dev --host 0.0.0.0 --port 9090
+      - uptime-kuma:/app/data

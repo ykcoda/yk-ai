@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./04_short_memory.py:agent"
+  },
+  "env": "../.env"
+}

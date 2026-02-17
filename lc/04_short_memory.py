@@ -2,7 +2,7 @@ from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 from langchain.messages import HumanMessage
 from langgraph.checkpoint.memory import InMemorySaver
-from lc.utils import ai_settings
+from utils import ai_settings
 from pprint import pprint
 
 
