@@ -1,28 +1,25 @@
-from netmiko import ConnectHandler  # type: ignore
+from dotenv import load_dotenv
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+from langchain.messages import HumanMessage
+from langchain.tools import tool
+from tavily import TavilyClient  # type: ignore
+
+load_dotenv()
+
+tavily_client = TavilyClient()
 
 
-class NetworkConfig:
-
-    def __init__(self, device: dict):
-        self.connect = ConnectHandler(**device)
-
-    def run_command(self, command: str):
-        return self.connect.send_command(command)
+@tool
+def web_search(query: str):
+    """searches the internet for information based on user query"""
+    return tavily_client.search(query)
 
 
-ip_address = input("IP Address: ")
-command = input("Command#: ")
-
-device = {
-    "device_type": "cisco_ios",
-    "host": f"{ip_address}",
-    "username": "y.kafreh",
-    "password": "password.1password.1",
-}
+agent = create_agent(model="gpt-5-nano")
 
 
-net_conf = NetworkConfig(device)
-
-output = net_conf.run_command(f"{command}")
-
-print(output)
+response = agent.invoke(
+    {"messages": [HumanMessage("Who is the president of ghana as at 2026")]}
+)
+print(response["messages"][-1].content)
