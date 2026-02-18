@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langchain.messages import HumanMessage, SystemMessage
+from langchain_core.prompts import ChatPromptTemplate
 
 load_dotenv()
 
@@ -11,10 +11,12 @@ model = ChatOpenAI()
 
 # chain.invoke("who is currently leading the premier league")
 
-
-model.invoke(
+template = ChatPromptTemplate(
     [
-        HumanMessage("Tell me about programming"),
-        SystemMessage("You are helpfull assistance who tells joke"),
+        ("system", "You are a helpful assistant that tells kokes"),
+        ("human", "tell me about a {topic}"),
     ]
 )
+
+
+template.invoke({"topic": "python"})
