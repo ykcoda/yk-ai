@@ -1,23 +1,17 @@
 import os
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
+from langchain_core.prompts import ChatPromptTemplate
+
 
 load_dotenv()
 
-splitter = RecursiveCharacterTextSplitter(
-    chunk_size=500,
-    chunk_overlap=50,
-)
 
-
-embeddings = OpenAIEmbeddings()
-
-
-def document_loader(docs_path: str):
-    documents: list[str] = []
+def load_document(docs_path: str):
+    documents = []
 
     for filename in os.listdir(docs_path):
         file_path = os.path.join(docs_path, filename)
@@ -27,30 +21,62 @@ def document_loader(docs_path: str):
         elif filename.endswith(".pdf"):
             loader = PyPDFLoader(file_path)
         else:
-            print(f"Unsupported file type: {file_path}")
+            print(f"Unsupported Document: {filename}")
             continue
         documents.extend(loader.load())
     return documents
 
 
-documents = document_loader("./documents")
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50,
+)
+documents = load_document("./documents")
 
-
+print(f"Documents loaded: {len(documents)}")
 splits = splitter.split_documents(documents)
 
+embeddings_function = OpenAIEmbeddings()
 
-document_embeddings = embeddings.embed_documents(
-    [split.page_content for split in splits]
-)
+# embeddings = embeddings_function.embed_documents(
+#     [split.page_content for split in splits]
+# )
 
-print(f"Enbiddings Size: {len(document_embeddings)}")
+# print(embeddings)
 
-
-collection_name = "my_collection"
 vector_db = Chroma.from_documents(
+    collection_name="my_collections",
+    embedding=embeddings_function,
     documents=splits,
-    embedding=embeddings,
-    collection_name=collection_name,
     persist_directory="./chroma_db",
 )
-print("Vector db is created")
+
+# Perform similarity search
+# query = "When is the renewal of commvault"
+
+# search_result = vector_db.similarity_search(query, k=2)
+
+# for i, result in enumerate(search_result, 1):
+#     print(f"result: {i}")
+#     print(f"source: {result.metadata.get('source', 'Unknown')}")
+#     print(f"result: {result.page_content}")
+
+
+# retriever = vector_db.as_retriever(search_kwargs={"k": 2})
+
+query = "approver the commvault memo"
+
+results = vector_db.similarity_search(query, k=3)
+print(results[:2])
+
+llm_openai = ChatOpenAI()
+
+prompt = ChatPromptTemplate.from_template(
+    """Answer the following questions based on the context provided. 
+                                          think step by step before proving a detailed answer. 
+                                          I will tip you $1000 if the user finds it helpdful.
+                                          <context>
+                                          {context}
+                                          </context>
+                                          Question: {input}"""
+)
