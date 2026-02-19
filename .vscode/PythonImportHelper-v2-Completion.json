@@ -92,6 +92,22 @@
         "documentation": {}
     },
     {
+        "label": "Chroma",
+        "importPath": "langchain_chroma",
+        "description": "langchain_chroma",
+        "isExtraImport": true,
+        "detail": "langchain_chroma",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain_text_splitters",
+        "description": "langchain_text_splitters",
+        "isExtraImport": true,
+        "detail": "langchain_text_splitters",
+        "documentation": {}
+    },
+    {
         "label": "InMemorySaver",
         "importPath": "langgraph.checkpoint.memory",
         "description": "langgraph.checkpoint.memory",
@@ -207,11 +223,11 @@
         "documentation": {}
     },
     {
-        "label": "agent",
+        "label": "splitters",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "agent = create_agent(model=\"gpt-5-nano\")\ndl = DocLoader(dir_path=\"./documents\")\nagent.invoke({\"messages\": [HumanMessage(\"Who is leading the premier league\")]})",
+        "peekOfCode": "splitters = RecursiveCharacterTextSplitter(\n    chunk_size=2000,\n    chunk_overlap=800,\n)\ndl = DocLoader(dir_path=\"./documents\")\nsplits = splitters.split_documents(dl.load_documents)\n###############VECTOR_DB#######################\nchroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,",
         "detail": "main",
         "documentation": {}
     },
@@ -220,7 +236,34 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "dl = DocLoader(dir_path=\"./documents\")\nagent.invoke({\"messages\": [HumanMessage(\"Who is leading the premier league\")]})",
+        "peekOfCode": "dl = DocLoader(dir_path=\"./documents\")\nsplits = splitters.split_documents(dl.load_documents)\n###############VECTOR_DB#######################\nchroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,\n    embedding=OpenAIEmbeddings(),\n    persist_directory=\"./chroma_DB\",\n)\n# results = chroma_db.similarity_search(\"solarwinds memo\", k=100)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "splits",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "splits = splitters.split_documents(dl.load_documents)\n###############VECTOR_DB#######################\nchroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,\n    embedding=OpenAIEmbeddings(),\n    persist_directory=\"./chroma_DB\",\n)\n# results = chroma_db.similarity_search(\"solarwinds memo\", k=100)\n###############AGENTS##########################",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "chroma_db",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "chroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,\n    embedding=OpenAIEmbeddings(),\n    persist_directory=\"./chroma_DB\",\n)\n# results = chroma_db.similarity_search(\"solarwinds memo\", k=100)\n###############AGENTS##########################\nagent = create_agent(\n    model=\"gpt-5-nano\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "agent",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "agent = create_agent(\n    model=\"gpt-5-nano\",\n)\nagent.invoke({\"messages\": [HumanMessage(\"Who is leading the premier league\")]})",
         "detail": "main",
         "documentation": {}
     }
