@@ -29,8 +29,8 @@ def get_documents(directory_path: str):
 documents = get_documents("./documents")
 
 spliters = RecursiveCharacterTextSplitter(
-    chunk_size=500,
-    chunk_overlap=50,
+    chunk_size=5000,
+    chunk_overlap=1500,
 )
 
 splits = spliters.split_documents(documents=documents)
@@ -46,7 +46,7 @@ vector_db = Chroma.from_documents(
 # print(vector_db.similarity_search("when is the next commvault renewal", k=3))
 
 
-retriever = vector_db.as_retriever(search_kwargs={"k": 3})
+retriever = vector_db.as_retriever(search_kwargs={"k": 500})
 
 retriever_tool = create_retriever_tool(
     retriever, name="kb_search", description="Search the database for relevant info"
