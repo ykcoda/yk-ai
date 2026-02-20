@@ -1,0 +1,516 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "PyPDFLoader",
+        "importPath": "langchain_community.document_loaders",
+        "description": "langchain_community.document_loaders",
+        "isExtraImport": true,
+        "detail": "langchain_community.document_loaders",
+        "documentation": {}
+    },
+    {
+        "label": "Docx2txtLoader",
+        "importPath": "langchain_community.document_loaders",
+        "description": "langchain_community.document_loaders",
+        "isExtraImport": true,
+        "detail": "langchain_community.document_loaders",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "create_agent",
+        "importPath": "langchain.agents",
+        "description": "langchain.agents",
+        "isExtraImport": true,
+        "detail": "langchain.agents",
+        "documentation": {}
+    },
+    {
+        "label": "create_agent",
+        "importPath": "langchain.agents",
+        "description": "langchain.agents",
+        "isExtraImport": true,
+        "detail": "langchain.agents",
+        "documentation": {}
+    },
+    {
+        "label": "create_agent",
+        "importPath": "langchain.agents",
+        "description": "langchain.agents",
+        "isExtraImport": true,
+        "detail": "langchain.agents",
+        "documentation": {}
+    },
+    {
+        "label": "tool",
+        "importPath": "langchain.tools",
+        "description": "langchain.tools",
+        "isExtraImport": true,
+        "detail": "langchain.tools",
+        "documentation": {}
+    },
+    {
+        "label": "tool",
+        "importPath": "langchain.tools",
+        "description": "langchain.tools",
+        "isExtraImport": true,
+        "detail": "langchain.tools",
+        "documentation": {}
+    },
+    {
+        "label": "HumanMessage",
+        "importPath": "langchain.messages",
+        "description": "langchain.messages",
+        "isExtraImport": true,
+        "detail": "langchain.messages",
+        "documentation": {}
+    },
+    {
+        "label": "HumanMessage",
+        "importPath": "langchain.messages",
+        "description": "langchain.messages",
+        "isExtraImport": true,
+        "detail": "langchain.messages",
+        "documentation": {}
+    },
+    {
+        "label": "HumanMessage",
+        "importPath": "langchain.messages",
+        "description": "langchain.messages",
+        "isExtraImport": true,
+        "detail": "langchain.messages",
+        "documentation": {}
+    },
+    {
+        "label": "ConnectHandler",
+        "importPath": "netmiko",
+        "description": "netmiko",
+        "isExtraImport": true,
+        "detail": "netmiko",
+        "documentation": {}
+    },
+    {
+        "label": "ConnectHandler",
+        "importPath": "netmiko",
+        "description": "netmiko",
+        "isExtraImport": true,
+        "detail": "netmiko",
+        "documentation": {}
+    },
+    {
+        "label": "TavilyClient",
+        "importPath": "tavily",
+        "description": "tavily",
+        "isExtraImport": true,
+        "detail": "tavily",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "get_scalar_api_reference",
+        "importPath": "scalar_fastapi",
+        "description": "scalar_fastapi",
+        "isExtraImport": true,
+        "detail": "scalar_fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAIEmbeddings",
+        "importPath": "langchain_openai",
+        "description": "langchain_openai",
+        "isExtraImport": true,
+        "detail": "langchain_openai",
+        "documentation": {}
+    },
+    {
+        "label": "Chroma",
+        "importPath": "langchain_chroma",
+        "description": "langchain_chroma",
+        "isExtraImport": true,
+        "detail": "langchain_chroma",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain_text_splitters",
+        "description": "langchain_text_splitters",
+        "isExtraImport": true,
+        "detail": "langchain_text_splitters",
+        "documentation": {}
+    },
+    {
+        "label": "create_retriever_tool",
+        "importPath": "langchain_core.tools.retriever",
+        "description": "langchain_core.tools.retriever",
+        "isExtraImport": true,
+        "detail": "langchain_core.tools.retriever",
+        "documentation": {}
+    },
+    {
+        "label": "InMemorySaver",
+        "importPath": "langgraph.checkpoint.memory",
+        "description": "langgraph.checkpoint.memory",
+        "isExtraImport": true,
+        "detail": "langgraph.checkpoint.memory",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "DocLoader",
+        "importPath": "document_loader",
+        "description": "document_loader",
+        "isExtraImport": true,
+        "detail": "document_loader",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"yk-ai\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"yk-ai\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"yk-ai\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"yk-ai\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"yk-ai\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "DocLoader",
+        "kind": 6,
+        "importPath": "document_loader",
+        "description": "document_loader",
+        "peekOfCode": "class DocLoader:\n    def __init__(self, dir_path: str):\n        self.dir_path: str = dir_path\n        self.documents: list[str] = []\n    @property\n    def load_documents(self):\n        for filename in os.listdir(self.dir_path):\n            doc_path = os.path.join(self.dir_path, filename)\n            if filename.endswith(\".pdf\"):\n                loader = PyPDFLoader(doc_path)",
+        "detail": "document_loader",
+        "documentation": {}
+    },
+    {
+        "label": "web_search",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def web_search(query: str):\n    \"\"\"a tool that searches the web for current information if the model is unable to provide accurate info\"\"\"\n    return tavily_client.search(query)\n@tool\ndef network_device(ip: str, command: str):\n    \"\"\"Conencts to a network device by accepting an ip address and a command to execute on the device\"\"\"\n    device = {\n        \"device_type\": \"cisco_ios\",  # Change if different vendor\n        \"host\": f\"{ip}\",\n        \"username\": \"y.kafreh\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "network_device",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def network_device(ip: str, command: str):\n    \"\"\"Conencts to a network device by accepting an ip address and a command to execute on the device\"\"\"\n    device = {\n        \"device_type\": \"cisco_ios\",  # Change if different vendor\n        \"host\": f\"{ip}\",\n        \"username\": \"y.kafreh\",\n        \"password\": \"password.1password.1\",\n    }\n    # Establish SSH connection\n    connection = ConnectHandler(**device)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "query",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def query(query: str = Body(...)):\n    print(query)\n    response = agent.invoke({\"messages\": [HumanMessage(query)]})\n    return response[\"messages\"][-1].content\n@app.get(\"/scalar\", include_in_schema=False)\ndef scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,\n    )",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "scalar",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,\n    )",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "tavily_client",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "tavily_client = TavilyClient()\n@tool\ndef web_search(query: str):\n    \"\"\"a tool that searches the web for current information if the model is unable to provide accurate info\"\"\"\n    return tavily_client.search(query)\n@tool\ndef network_device(ip: str, command: str):\n    \"\"\"Conencts to a network device by accepting an ip address and a command to execute on the device\"\"\"\n    device = {\n        \"device_type\": \"cisco_ios\",  # Change if different vendor",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "agent",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "agent = create_agent(\n    model=\"gpt-5-mini\",\n    tools=[web_search, network_device],\n    system_prompt=\"\"\"You are a network expert, based on the input/query from the user identify the ip address and command to execute on the network device by using the network_device tool. if the command submited is not correct try and get a valid command to execute and present a very nice output that is easily readable. Also i have a web_search tool that can give present info if the model can not provide that. \"\"\",\n)\nquestion = \"\"\napp = FastAPI()\n@app.post(\"/query/\")\ndef query(query: str = Body(...)):\n    print(query)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "question",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "question = \"\"\napp = FastAPI()\n@app.post(\"/query/\")\ndef query(query: str = Body(...)):\n    print(query)\n    response = agent.invoke({\"messages\": [HumanMessage(query)]})\n    return response[\"messages\"][-1].content\n@app.get(\"/scalar\", include_in_schema=False)\ndef scalar():\n    return get_scalar_api_reference(",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n@app.post(\"/query/\")\ndef query(query: str = Body(...)):\n    print(query)\n    response = agent.invoke({\"messages\": [HumanMessage(query)]})\n    return response[\"messages\"][-1].content\n@app.get(\"/scalar\", include_in_schema=False)\ndef scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "network_device",
+        "kind": 2,
+        "importPath": "network",
+        "description": "network",
+        "peekOfCode": "def network_device(ip: str, command: str):\n    \"\"\"Conencts to a network device by accepting an ip address and a command to execute on the device\"\"\"\n    device = {\n        \"device_type\": \"cisco_ios\",  # Change if different vendor\n        \"host\": f\"{ip}\",\n        \"username\": \"y.kafreh\",\n        \"password\": \"password.1password.1\",\n    }\n    # Establish SSH connection\n    connection = ConnectHandler(**device)",
+        "detail": "network",
+        "documentation": {}
+    },
+    {
+        "label": "agent",
+        "kind": 5,
+        "importPath": "network",
+        "description": "network",
+        "peekOfCode": "agent = create_agent(\n    model=\"gpt-5-mini\",\n    tools=[network_device],\n    system_prompt=\"\"\"You are a network expert, based on the input/query from the user identify the ip address and command to execute on the network device by using the network_device tool. if the command submited is not correct try and get a valid command to execute and present a very nice output that is easily readable\"\"\",\n)\nquestion = input(\"Send in any network command with the ip address: \")\nwhile True:\n    if question:\n        for message, metadata in agent.stream(\n            {\"messages\": [HumanMessage(question)]}, stream_mode=\"messages\"",
+        "detail": "network",
+        "documentation": {}
+    },
+    {
+        "label": "question",
+        "kind": 5,
+        "importPath": "network",
+        "description": "network",
+        "peekOfCode": "question = input(\"Send in any network command with the ip address: \")\nwhile True:\n    if question:\n        for message, metadata in agent.stream(\n            {\"messages\": [HumanMessage(question)]}, stream_mode=\"messages\"\n        ):\n            if message.content:\n                print(message.content, end=\"\", flush=True)",
+        "detail": "network",
+        "documentation": {}
+    },
+    {
+        "label": "splitters",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "splitters = RecursiveCharacterTextSplitter(\n    chunk_size=2000,\n    chunk_overlap=800,\n)\ndl = DocLoader(dir_path=\"./documents\")\nsplits = splitters.split_documents(dl.load_documents)\n###############VECTOR_DB#######################\nchroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "dl",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "dl = DocLoader(dir_path=\"./documents\")\nsplits = splitters.split_documents(dl.load_documents)\n###############VECTOR_DB#######################\nchroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,\n    embedding=OpenAIEmbeddings(),\n    persist_directory=\"./chroma_DB\",\n)\n# results = chroma_db.similarity_search(\"solarwinds memo\", k=100)",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "splits",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "splits = splitters.split_documents(dl.load_documents)\n###############VECTOR_DB#######################\nchroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,\n    embedding=OpenAIEmbeddings(),\n    persist_directory=\"./chroma_DB\",\n)\n# results = chroma_db.similarity_search(\"solarwinds memo\", k=100)\nretriever = chroma_db.as_retriever(search_kwargs={\"k\": 3})",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "chroma_db",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "chroma_db = Chroma.from_documents(\n    collection_name=\"yk_ai_collection\",\n    documents=splits,\n    embedding=OpenAIEmbeddings(),\n    persist_directory=\"./chroma_DB\",\n)\n# results = chroma_db.similarity_search(\"solarwinds memo\", k=100)\nretriever = chroma_db.as_retriever(search_kwargs={\"k\": 3})\nretriever_tool = create_retriever_tool(\n    retriever=retriever,",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "retriever",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "retriever = chroma_db.as_retriever(search_kwargs={\"k\": 3})\nretriever_tool = create_retriever_tool(\n    retriever=retriever,\n    name=\"kb_search\",\n    description=\"Search the doc knowledge for information\",\n)\n###############AGENTS##########################\nagent = create_agent(\n    model=\"gpt-5-mini\",\n    tools=[retriever_tool],",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "retriever_tool",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "retriever_tool = create_retriever_tool(\n    retriever=retriever,\n    name=\"kb_search\",\n    description=\"Search the doc knowledge for information\",\n)\n###############AGENTS##########################\nagent = create_agent(\n    model=\"gpt-5-mini\",\n    tools=[retriever_tool],\n    system_prompt=\"\"\"You are helpful assistant who can assist get accurate information about memo from the kb_search tool upon users request or query.\"\"\",",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "agent",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "agent = create_agent(\n    model=\"gpt-5-mini\",\n    tools=[retriever_tool],\n    system_prompt=\"\"\"You are helpful assistant who can assist get accurate information about memo from the kb_search tool upon users request or query.\"\"\",\n    checkpointer=InMemorySaver(),\n)\nquestion = st.chat_input(\"Query: \")\nif question:\n    config = {\"configurable\": {\"thread_id\": \"1\"}}\n    response = agent.invoke({\"messages\": [HumanMessage(question)]}, config=config)",
+        "detail": "test_script",
+        "documentation": {}
+    },
+    {
+        "label": "question",
+        "kind": 5,
+        "importPath": "test_script",
+        "description": "test_script",
+        "peekOfCode": "question = st.chat_input(\"Query: \")\nif question:\n    config = {\"configurable\": {\"thread_id\": \"1\"}}\n    response = agent.invoke({\"messages\": [HumanMessage(question)]}, config=config)\n    st.write(response[\"messages\"][-1].content)",
+        "detail": "test_script",
+        "documentation": {}
+    }
+]
