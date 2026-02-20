@@ -365,7 +365,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def query(query: str = Body(...)):\n    print(query)\n    response = agent.invoke({\"messages\": [HumanMessage(query)]})\n    return response[\"messages\"][-1].content\n@app.get(\"/scalar\", include_in_schema=False)\ndef scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,\n    )",
+        "peekOfCode": "def query(query: str = Body(...)):\n    print(query)\n    response = agent.invoke({\"messages\": [HumanMessage(query)]})\n    return response[\"messages\"][-1].content\n@app.get(\"/scalar\", include_in_schema=False)\ndef scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,\n    )\n@app.get(\"/health\")",
         "detail": "main",
         "documentation": {}
     },
@@ -374,7 +374,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,\n    )",
+        "peekOfCode": "def scalar():\n    return get_scalar_api_reference(\n        openapi_url=app.openapi_url,\n    )\n@app.get(\"/health\")\ndef health():\n    return {\"status\": \"ok\"}",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "health",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def health():\n    return {\"status\": \"ok\"}",
         "detail": "main",
         "documentation": {}
     },
