@@ -1,41 +1,63 @@
 from dotenv import load_dotenv
 from langchain.agents import create_agent
+from langchain.tools import tool
 from langchain.messages import HumanMessage
-from langchain_openai import OpenAIEmbeddings
-from langchain_chroma import Chroma
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langgraph.checkpoint.memory import InMemorySaver
-import streamlit as st
+from netmiko import ConnectHandler  # type: ignore
+from tavily import TavilyClient  # type: ignore
 
-from document_loader import DocLoader
+from fastapi import FastAPI, Body
+from scalar_fastapi import get_scalar_api_reference
 
 load_dotenv()
-st.title("Memo AI")
 
-###############SPLITTER##########################
-splitters = RecursiveCharacterTextSplitter(
-    chunk_size=2000,
-    chunk_overlap=800,
-)
-
-dl = DocLoader(dir_path="./documents")
-splits = splitters.split_documents(dl.load_documents)
+tavily_client = TavilyClient()
 
 
-###############VECTOR_DB#######################
-chroma_db = Chroma.from_documents(
-    collection_name="yk_ai_collection",
-    documents=splits,
-    embedding=OpenAIEmbeddings(),
-    persist_directory="./chroma_DB",
-)
+@tool
+def web_search(query: str):
+    """a tool that searches the web for current information if the model is unable to provide accurate info"""
+    return tavily_client.search(query)
 
-# results = chroma_db.similarity_search("solarwinds memo", k=100)
 
-###############AGENTS##########################
+@tool
+def network_device(ip: str, command: str):
+    """Conencts to a network device by accepting an ip address and a command to execute on the device"""
+    device = {
+        "device_type": "cisco_ios",  # Change if different vendor
+        "host": f"{ip}",
+        "username": "y.kafreh",
+        "password": "password.1password.1",
+    }
+    # Establish SSH connection
+    connection = ConnectHandler(**device)
+    # Enter enable mode (if required)
+    connection.enable()
+    # Run a command
+    output = connection.send_command(command)
+    return output
+
+
 agent = create_agent(
-    model="gpt-5-nano",
+    model="gpt-5-mini",
+    tools=[web_search, network_device],
+    system_prompt="""You are a network expert, based on the input/query from the user identify the ip address and command to execute on the network device by using the network_device tool. if the command submited is not correct try and get a valid command to execute and present a very nice output that is easily readable. Also i have a web_search tool that can give present info if the model can not provide that. """,
 )
 
+question = ""
 
-agent.invoke({"messages": [HumanMessage("Who is leading the premier league")]})
+
+app = FastAPI()
+
+
+@app.post("/query/")
+def query(query: str = Body(...)):
+    print(query)
+    response = agent.invoke({"messages": [HumanMessage(query)]})
+    return response["messages"][-1].content
+
+
+@app.get("/scalar", include_in_schema=False)
+def scalar():
+    return get_scalar_api_reference(
+        openapi_url=app.openapi_url,
+    )
