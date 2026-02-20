@@ -61,3 +61,7 @@ def scalar():
     return get_scalar_api_reference(
         openapi_url=app.openapi_url,
     )
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
